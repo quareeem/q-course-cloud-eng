@@ -1,0 +1,7 @@
+ssh -i /home/karimkarim/VSCODE_PROJS/q-course-cloud-eng/karim-akhmediyev.pem ubuntu@ec2-3-128-202-33.us-east-2.compute.amazonaws.com
+
+aws s3 cp s3://qnt-cloud-eng-homework1/file1.png /home/karimkarim/VSCODE_PROJS/q-course-cloud-eng
+
+
+aws s3 ls s3://qnt-bucket-karim-akhmediyev --profile default
+aws s3 cp s3://qnt-bucket-karim-akhmediyev /sample_img.jpg ./ --profile default
