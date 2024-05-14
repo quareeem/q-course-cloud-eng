@@ -29,7 +29,7 @@ jobs:
       
     - name: Terraform Format Check
       working-directory: ./tf
-      run: terraform fmt -check || true
+      run: terraform fmt -check
   
     - name: Initialize Terraform
       working-directory: ./tf
