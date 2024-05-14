@@ -5,3 +5,15 @@ aws s3 cp s3://qnt-cloud-eng-homework1/file1.png /home/karimkarim/VSCODE_PROJS/q
 
 aws s3 ls s3://qnt-bucket-karim-akhmediyev --profile default
 aws s3 cp s3://qnt-bucket-karim-akhmediyev /sample_img.jpg ./ --profile default
+
+
+
+terraform import aws_security_group.karim_akhmediyev_sg sg-0e9d87920d02f5fb1
+
+terraform import aws_s3_bucket.qnt_bucket qnt-bucket-karim-akhmediyev
+
+terraform import aws_iam_policy.s3_full_access_policy arn:aws:iam::654654410745:policy/s3-terraform-karim-akhmediyev
+
+
+terraform import aws_iam_role.ec2_s3_full_access_role ec2_s3_full_access_role_karim_akhmediyev
+
