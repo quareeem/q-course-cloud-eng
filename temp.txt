@@ -1,6 +1,7 @@
 ssh -i /home/karimkarim/VSCODE_PROJS/q-course-cloud-eng/karim-akhmediyev.pem ubuntu@ec2-3-128-202-33.us-east-2.compute.amazonaws.com
+chmod 400 /home/karimkarim/VSCODE_PROJS/q-course-cloud-eng/karim-akhmediyev.pem
 
-aws s3 cp s3://qnt-cloud-eng-homework1/file1.png /home/karimkarim/VSCODE_PROJS/q-course-cloud-eng
+aws s3 cp s3://qnt-cloud-eng-homework1/file1.png /home
 
 
 aws s3 ls s3://qnt-bucket-karim-akhmediyev --profile default
@@ -17,3 +18,10 @@ terraform import aws_iam_policy.s3_full_access_policy arn:aws:iam::654654410745:
 
 terraform import aws_iam_role.ec2_s3_full_access_role ec2_s3_full_access_role_karim_akhmediyev
 
+
+
+aws s3api get-object-acl --bucket qnt-bucket-karim-akhmediyev --key sample_img.jpg
+aws s3api get-object-acl --bucket qnt-bucket-karim-akhmediyev --key eticheskie-problemy-genetiki-xxi-veka.pdf
+aws s3api get-object-acl --bucket qnt-bucket-karim-akhmediyev --key Уведомление Образец.docx 
+
+aws s3api put-object-acl --bucket qnt-bucket-karim-akhmediyev --key sample_img.JPG --acl public-read
